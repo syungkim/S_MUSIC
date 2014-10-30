@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<link rel="stylesheet" href="css/_style.css"/>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+	<title>멜론 일간 Top100</title>
+</head>
+<body id="l-body">
+<div id="l-wrap" class="l-wrap on--video">
+    <div id="stage" class="stage active"><div id="video" class="video"></div></div>
+    <section class="l-player">
+		<h1 class="screen_out">멜론일간Top100</h1>
+		<div id="display" class="display">
+			<menu class="display-menu">
+				<button id="prev" class="fa fa-step-backward fa-2x" title="이전 곡"><span class="screen_out">이전 곡</span></button>
+				<button id="pause" class="fa fa-pause fa-2x" title="일시정지"><span class="screen_out">일시정지</span></button>
+				<button id="play" class="fa fa-play fa-2x" title="재생"><span class="screen_out">재생</span></button>
+				<button id="next" class="fa fa-step-forward fa-2x" title="다음 곡"><span class="screen_out">다음 곡</span></button>
+				<button id="repeat" class="off fa fa-repeat fa-2x" title="한곡 반복모드"><span class="screen_out">한곡 반복모드</span></button>
+				<button id="suffle" class="off fa fa-random fa-2x" title="무작위 재생모드"><span class="screen_out">무작위 재생모드</span></button>
+                <button id="volume-control" class="fa fa-volume-up fa-2x"><span class="screen_out">볼륨조절</span></button>
+                <!--<input id="volume" class="volume" type="range" min="0" max="100" value="100" title="볼륨">-->
+				<button id="list-toggle" class="off fa fa-list fa-2x" title="재생목록"><span class="screen_out">재생목록</span></button>
+				<button id="video-toggle" class="fa fa-video-camera fa-2x" title="영상"><span class="screen_out">영상</span></button>
+				<button id="lyric-toggle" class="off fa fa-file-text-o fa-2x" title="가사"><span class="screen_out">가사</span></button>
+			</menu>
+			<div class="progress"><input id="progress" class="progress-bar" type="range" min="0" max="100" value="0"></div>
+			<div class="timestamp"><span id="progress-current" class="timestamp-now">0:00</span> / <span id="progress-total" class="timestamp-total">0:00</span></div>
+			<h2 id="display-info" class="display-info"></h2>
+		</div>
+	</section>
+    <div id="list" class="list active">
+        <!--<div id="genre" class="list-genre"><a href="#kpop">K-POP</a><a href="#pop">POP</a></div>-->
+        <div id="list_inner" class="list_inner"></div>
+    </div>
+	<div id="lyric" class="lyric active"></div>
+</div>
+<div id="loading" class="loading"></div><span id="dialog" class="dialog"><input id="volume" class="volume" type="range" min="0" max="100" value="100" title="볼륨"></span>
+<script>
+	var tag = document.createElement('script');
+	tag.src = "http://www.youtube.com/player_api";
+	var firstScriptTag = document.getElementsByTagName('script')[0];
+	firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/u.js"></script>
+<script>
+    if(navigator.userAgent.indexOf('Trident') != -1){ alert('크롬/파이어폭스/오페라 사용을 권장합니다.'); }
+    if(navigator.userAgent.indexOf('Android') != -1){ $('#l-wrap').addClass('l-mobile') }
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-49085913-1', 'auto');
+	ga('send', 'pageview');
+</script>
+</body>
+</html>

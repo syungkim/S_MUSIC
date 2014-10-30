@@ -1,0 +1,15 @@
+{
+  "name": "SYUNG MUSIC",
+  "version": "0.0.1",
+  "main": "index.html",
+  "window": {
+    "width": 855,
+    "height": 545,
+	"resizable" : false,
+	"toolbar" : false,
+	"icon": "ico_music.png"
+  },
+  "webkit": {
+    "plugin": true
+  }
+}
