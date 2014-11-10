@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="ko">
+<head>
+    <meta charset="utf-8">
+    <link rel="dns-prefetch" href="//ajax.googleapis.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+</head>
+<body>
+<!--[if lt ie 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="mod">
+    <ul id="category">
+        <li>
+            <a href="#melon">melon</a>
+        </li>
+        <li>
+            <a href="#my">my</a>
+            <div>
+
+            </div>
+        </li>
+        <li>
+            <a href="#open">open</a>
+            <div>
+
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="search" class="mod">
+    <div class="search-head">
+        <input type="search" id="search-txt" value="거짓말" /><button id="search-confirm">검색</button>
+    </div>
+    <div id="search-list">
+
+    </div>
+</div>
+
+
+<div class="mod">
+대기열
+</div>
+
+
+
+
+
+
+
+
+
+<!-- __________ TEMPLATE _____________-->
+<script type="text/template" id="tpl_itemist">
+    <div>
+        <button>선택 담기</button>
+    </div>
+    <ul>
+<% _.each( itemList, function( item ){ %>
+        <li class="item"><label><input type="checkbox" value="<%- item.id %>"/><img class="item_img" width="80" src="<%- item.thumURL %>" alt=""/><span class="item_tit"><%- item.title %></span></label></li>
+<% }); %>
+    </ul>
+</script>
+<!-- //__________ TEMPLATE _____________-->
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
+<script src="./js/01.js"></script>
+<script src="./js/view/s_music.view.js"></script>
+</body>
+</html>
