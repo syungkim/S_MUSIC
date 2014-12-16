@@ -9,7 +9,7 @@
  $body = iconv('utf-8', 'euc-kr', $body);  //본문 내용 UTF-8화
  $encoded_subject="=?".$charset."?B?".base64_encode($subject)."?=\n"; // 인코딩된 제목
  if($song){	
-	$result=mail($mailto, $encoded_subject, $body);
+	$result=mail($mailto, $encoded_subject, $song) ;
  }
  if($result){
   echo true;
