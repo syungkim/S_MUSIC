@@ -1,1 +1,201 @@
-.mod {float:left;width:300px;height:600px;border:1px solid #333;overflow-x:hidden;overflow-y:auto;}
+@charset "utf-8";
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, form, fieldset, legend, input, textarea, select, p, button {margin:0; padding:0}
+html {font-family:sans-serif; -ms-text-size-adjust:100%; -webkit-text-size-adjust:100%;}
+h1, h2, h3, h4, h5, h6 {font-weight:normal; font-size:100%; line-height:1.2;}
+a { background: transparent;text-decoration:none; -webkit-tap-highlight-color:transparent }
+a:focus { outline: thin dotted; }
+ul, ol, li {list-style:none}
+b, strong { font-weight:bold; }
+i,em,address,optgroup{ font-style:normal;font-weight:normal}
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary { display: block; margin:0; padding:0 }
+audio, canvas, video { display: inline-block; }
+audio:not([controls]) { display: none; height: 0; }
+svg:not(:root) {overflow: hidden;}
+fieldset, img {border: 0;}
+[hidden], template { display: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+caption, legend {overflow: hidden;position: absolute;width:1px;height: 1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);}
+button, input, select, textarea { font-family: inherit; font-size: 100%; margin: 0; }
+button, input { line-height: normal; }
+button, select { text-transform: none; }
+button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; background:none; border:0; cursor: pointer; }
+button[disabled], html input[disabled] { cursor: default; }
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
+input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
+button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
+textarea { overflow: auto; vertical-align: top; }
+
+
+@media print {
+    * { background: transparent !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+    a, a:visited { text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead {display: table-header-group;}
+    tr, img { page-break-inside: avoid; }
+    img { max-width: 100% !important; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3 { page-break-after: avoid; }
+}
+
+/* custom */
+html, button, input, select, textarea { color: #222; }
+html { font-size: 1em; line-height: 1.4; font-family:'맑은고딕',dotum,Helvetica,sans-serif; direction:ltr;}
+audio, canvas, img, svg, video { vertical-align: middle; }
+textarea { resize: vertical; }
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+
+/* IMPORT : UTIL - HIDE & IR */
+.hidden { display: none !important; visibility: hidden; }
+.invisible {visibility: hidden;}
+.screen_out {overflow: hidden;position: absolute;width:1px;height: 1px;margin:-1px;padding:0;border:0;clip:rect(0 0 0 0);}
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+/* IMPORT : SKIP Navigation */
+.skipNavigation {width:100%;height:0;top:0;left:0}
+.skipNavigation a {display:block;position:absolute;top:0;text-indent:-9999px;overflow:hidden}
+.skipNavigation a:focus, .skipNavigation a:active {z-index:9999;display:block;position:absolute;top:0;width:100%;height:14px;padding:6px 0;font-size:14px;line-height:14px;text-indent:0;text-align:center;color:#fff;background:#666}
+
+
+
+
+/* ------------------------- common style --------------------- */
+
+.button {
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    margin: 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    font:13px/normal sans-serif;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-image: linear-gradient(#f4f4f4, #ececec);
+    background-clip: padding-box;
+    border-radius: 0.2em;
+}
+
+.button:hover,
+.button:focus,
+.button:active,
+.button.active {
+    border-color: #3072b3;
+    border-bottom-color: #2a65a0;
+    text-decoration: none;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+    color: #fff;
+    background-color: #3c8dde;
+    background-image: linear-gradient(#599bdc, #3072b3);
+}
+
+.button:active,
+.button.active {
+    border-color: #2a65a0;
+    border-bottom-color: #3884cd;
+    background-color: #3072b3;
+    background-image: linear-gradient(#3072b3, #599bdc);
+}
+
+/* overrides extra padding on button elements in Firefox */
+.button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+
+
+::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);background-color: #F5F5F5;}
+::-webkit-scrollbar{width: 6px;background-color: #F5F5F5;}
+::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,.3);}
+input[type='range'] {
+    -webkit-appearance: none;
+    background-color: #fff;
+    height: 1px;
+    vertical-align: middle;
+}
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    border-radius: 12px;
+    border:none;
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+}
+/* ------------------------- //common style --------------------- */
+
+
+
+
+*,
+*:after,
+*:before {box-sizing:border-box;}
+
+html,body,.l-wrap, .l-head,.l-main, .l-play {min-width:840px;overflow:hidden;}
+.l-wrap {padding:50px 0 60px 100px;}
+.l-head {position:fixed;top:0;left:0;width:100%;height:50px;background:#F2F4F8;z-index:30;}
+.l-head .logo {position:absolute;top:0;left:0;padding:0 10px;height:50px;line-height:50px;font-weight:bold;}
+.l-head .search {position:absolute;top:50%;left:200px;transform:translateY(-50%);font-size:13px;}
+.l-head .search-txt {width:400px;padding: 0.5em 1em;}
+.l-head .search-btn {}
+
+.l-play {position:fixed;bottom:0;left:0;width:100%;height:60px;padding:0 20px;background:#5a6a7a;color:#fff;z-index:30;}
+.play-tit {position:relative;top:5px;font-size:13px;}
+.play-ctr {position:relative;float:right;width:400px;text-align: right;z-index:2;}
+.play-ctr button {margin:0 5px;color:#eee;}
+.play-time {position:absolute;top:20px;left:20px;width:100%;padding-right:450px;z-index:1;}
+.play-time-bar {width:100%;}
+.play-time-stamp {position:relative;top:-5px;text-align:right;font-size:12px;}
+.play-time-now {font-weight: bold;}
+
+.l-main {overflow:auto;position:absolute;top:0;left:0;width:100%;height:100%;padding:50px 0 60px 188px;}
+
+.l-nav {position:fixed;top:50px;left:0;bottom:60px;width:150px;height:100%;z-index:1;}
+.l-nav a {display:block;height:50px;border-bottom:1px solid #e6e6e6;font-size:13px;line-height:50px;text-align:center;}
+
+.mod-list {padding:10px;}
+.mod-list .checkbox {width:20px;height:20px;vertical-align: middle;cursor:pointer;}
+.mod-list .button {padding:0.25em 0.5em}
+
+/* 곡 목록 */
+.playlist-ctr {padding:0 10px;}
+.playlist {margin:10px 0;font-size:13px;}
+.playlist-item {height:50px;padding:0 10px;border-bottom:1px solid #e6e6e6;line-height:50px;}
+.playlist-item:after {content:"";display:block;clear:both}
+.playlist-item:first-child {border-top:1px solid #e6e6e6;}
+.playlist [class^="col"] {display:inline-block;margin-left:-0.25em;padding:0 5px;text-align:center;}
+.playlist .col1{width:20px;}
+.playlist .col2{width:50px;}
+.playlist .col3{}
+.playlist .col4{}
+.playlist .col5{width:40%;text-align:left;font-weight: bold;}
+.playlist .col6{width:15%;}
+.playlist .col7{}
+.playlist .col8{}
+
+/* 앨범 목록 */
+.album-list {}
+.album-list > li {float:left;}
+.album-item {position:relative;top:0;left:0;margin:2px;border:1px solid #e6e6e6;}
+.album-item > a {display:block;width:160px;height:160px;padding:10px;}
+
+.album-item span {display:block;font-size:12px;text-align:right;}
+.album-item .thum {position:absolute;top:0;left:0;z-index:-1;width:100%;height:100%;}
+.album-item .thum img {width:100%;height:100%;}
+.album-item .tit {overflow:hidden;height:80px;margin-bottom:5px;font-size:15px;text-align:left;}
+.album-item .cnt {}
+.album-item .maker {}
+.album-item .date {}

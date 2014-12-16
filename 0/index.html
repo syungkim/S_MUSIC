@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="msapplication-tap-highlight" content="no" />
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
@@ -17,38 +18,216 @@
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
 
-<div class="mod">
-    <ul id="category">
-        <li>
-            <a href="#melon">melon</a>
-        </li>
-        <li>
-            <a href="#my">my</a>
-            <div>
+<div class="l-wrap">
+    <!-- Header : S -->
+    <header class="l-head">
+        <h1 class="logo">S MUSIC</h1>
+        <div id="search" class="search">
+            <input type="search" id="search-txt" class="search-txt" placeholder="크리스마스하면 생각나는 노래?!"/><button class="button search-btn">검색</button>
+        </div>
+    </header>
+    <!-- Header : E -->
+    <!-- Player : S -->
+    <section class="l-play">
+        <h2 class="play-tit"><b>청춘연가</b>/ 넬</h2>
+        <div class="play-ctr">
+            <button id="prev" class="fa fa-step-backward fa-2x" title="이전 곡"><span class="screen_out">이전 곡</span></button>
+            <button id="pause" class="fa fa-pause fa-2x" style="display:none" title="일시정지"><span class="screen_out">일시정지</span></button>
+            <button id="play" class="fa fa-play fa-2x" title="재생"><span class="screen_out">재생</span></button>
+            <button id="next" class="fa fa-step-forward fa-2x" title="다음 곡"><span class="screen_out">다음 곡</span></button>
 
+            <button id="repeat" class="off fa fa-repeat fa-2x" title="한곡 반복모드"><span class="screen_out">한곡 반복모드</span></button>
+            <button id="suffle" class="off fa fa-random fa-2x" title="무작위 재생모드"><span class="screen_out">무작위 재생모드</span></button>
+
+            <button id="volume-control" class="fa fa-volume-up fa-2x"><span class="screen_out">볼륨조절</span></button>
+            <button id="video-toggle" class="fa fa-video-camera fa-2x" title="영상"><span class="screen_out">영상</span></button>
+            <button id="lyric-toggle" class="off fa fa-file-text-o fa-2x" title="가사"><span class="screen_out">가사</span></button>
+            <button id="list-toggle" class="off fa fa-list fa-2x" title="재생목록"><span class="screen_out">재생목록</span></button>
+        </div>
+        <div class="play-time">
+            <input class="play-time-bar" type="range" min="0" max="100" value="0">
+            <div class="play-time-stamp"><span class="play-time-now">0:00</span> / <span class="play-time-end">0:00</span></div>
+        </div>
+    </section>
+    <!-- Player : E -->
+    <!-- Main : S -->
+    <main class="l-main">
+        <nav class="l-nav">
+            <ul>
+                <li><a href="#"><i class="fa fa-youtube-play"></i><span>멜론Top100</span></a></li>
+                <li><a href="#"><i class="fa fa-user"></i><span>마이앨범</span></a></li>
+                <li><a href="#"><i class="fa fa-users"></i><span>공개앨범</span></a></li>
+            </ul>
+        </nav>
+        <!-- 앨범리스트 -->
+        <section id="albumList" class="mod-list">
+            <ul class="album-list">
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="album-item">
+                        <a href="#">
+                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                            <span class="cnt">Count : 56</span>
+                            <span class="maker">Collector : 셩</span>
+                            <span class="date">Date : 2014.12.25</span>
+                        </a>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+        <!-- //앨범리스트 -->
+        <!-- 플레이 리스트 -->
+        <section id="playList" class="mod-list" style="display:none">
+            <div class="playlist-ctr">
+                <input type="checkbox" class="checkbox" name="" title="전체선택"/>
+                <button class="button">전체듣기</button>
+                <button class="button">선택듣기</button>
+                <button class="button">재생목록 추가</button>
+                <button class="button">선택담기</button>
             </div>
-        </li>
-        <li>
-            <a href="#open">open</a>
-            <div>
-
+            <ol class="playlist">
+                <li class="playlist-item">
+                    <span class="col1"><input type="checkbox" class="checkbox" title="마음대로-이진아 선택"/></span>
+                    <span class="col2"><em class="screen_out">순위</em>1</span>
+                    <span class="col3"><button class="button">재생</button></span>
+                    <span class="col4"><button class="button">추가</button></span>
+                    <span class="col5"><em class="screen_out">곡명</em>마음대로</span>
+                    <span class="col6"><em class="screen_out">아티스트</em>이진아</span>
+                    <span class="col7"><button class="button">가사</button></span>
+                    <span class="col8"><button class="button">담기</button></span>
+                </li>
+            </ol>
+            <div class="list-ctr">
+                <input type="checkbox" class="checkbox" name="" title="전체선택"/>
+                <button class="button">전체듣기</button>
+                <button class="button">선택듣기</button>
+                <button class="button">재생목록 추가</button>
+                <button class="button">선택담기</button>
             </div>
-        </li>
-    </ul>
-</div>
-
-<div id="search" class="mod">
-    <div class="search-head">
-        <input type="search" id="search-txt" value="거짓말" /><button id="search-confirm">검색</button>
-    </div>
-    <div id="search-list">
-
-    </div>
-</div>
-
-
-<div class="mod">
-대기열
+        </section>
+        <!-- //플레이 리스트 -->
+    </main>
+    <!-- Main : E -->
 </div>
 
 
