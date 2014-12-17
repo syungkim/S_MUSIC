@@ -1,0 +1,10 @@
+<ol class="playlist">
+    {{#itemList}}
+    <li class="playlist-item" data-id="{{id}}" data-tit="{{title}}">
+        <span><img height="30" src="http://i.ytimg.com/vi/{{id}}/mqdefault.jpg" alt="{{title}}"></span>
+        <span><em class="screen_out">곡명</em>{{title}}</span>
+        <span><button class="button js-playnow">재생</button></span>
+        <span><button class="button js-addPlayList">추가</button></span>
+    </li>
+    {{/itemList}}
+</ol>

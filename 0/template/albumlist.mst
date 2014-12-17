@@ -1,0 +1,12 @@
+<ul class="album-list">
+    <li>
+        <div class="album-item">
+            <a href="#">
+                <span class="tit"><strong>비올때 좋은 노래들</strong></span>
+                <span class="cnt">Count : 56</span>
+                <span class="maker">Collector : 셩</span>
+                <span class="date">Date : 2014.12.25</span>
+            </a>
+        </div>
+    </li>
+</ul>

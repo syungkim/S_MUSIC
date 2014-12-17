@@ -1,0 +1,21 @@
+
+<div class="playlist-ctr">
+    <input type="checkbox" class="checkbox" name="" title="전체선택"/>
+    <button class="button">전체듣기</button>
+    <button class="button">선택듣기</button>
+    <button class="button">재생목록 추가</button>
+    <button class="button">선택담기</button>
+</div>
+<ol class="playlist">
+
+    <li class="playlist-item">
+        <span><input type="checkbox" class="checkbox" title="{{title}} 선택"/></span>
+        <span>{{@index}}</span>
+        <span>{{title}}</span>
+        <span><button class="button">재생</button></span>
+        <span><button class="button">추가</button></span>
+        <span><button class="button">담기</button></span>
+        <span><button class="button">가사</button></span>
+    </li>
+
+</ol>

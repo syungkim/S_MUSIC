@@ -23,13 +23,14 @@
     <header class="l-head">
         <h1 class="logo">S MUSIC</h1>
         <div id="search" class="search">
-            <input type="search" id="search-txt" class="search-txt" placeholder="크리스마스하면 생각나는 노래?!"/><button class="button search-btn">검색</button>
+            <input type="search" id="search-txt" class="search-txt" placeholder="크리스마스하면 생각나는 노래?!"/><button id="search-btn" class="button search-btn">검색</button>
         </div>
     </header>
     <!-- Header : E -->
     <!-- Player : S -->
     <section class="l-play">
         <h2 class="play-tit"><b>청춘연가</b>/ 넬</h2>
+        <div id="stage" class="stage"><div id="video" class="video"></div></div>
         <div class="play-ctr">
             <button id="prev" class="fa fa-step-backward fa-2x" title="이전 곡"><span class="screen_out">이전 곡</span></button>
             <button id="pause" class="fa fa-pause fa-2x" style="display:none" title="일시정지"><span class="screen_out">일시정지</span></button>
@@ -60,200 +61,22 @@
             </ul>
         </nav>
         <!-- 앨범리스트 -->
-        <section id="albumList" class="mod-list">
-            <ul class="album-list">
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <div class="album-item">
-                        <a href="#">
-                            <span class="tit"><strong>비올때 좋은 노래들</strong></span>
-                            <span class="cnt">Count : 56</span>
-                            <span class="maker">Collector : 셩</span>
-                            <span class="date">Date : 2014.12.25</span>
-                        </a>
-                    </div>
-                </li>
-
-            </ul>
-        </section>
+        <section id="albumList" class="mod-list" style="display:none"></section>
         <!-- //앨범리스트 -->
+        <!-- 검색 리스트 -->
+        <section id="searchList" class="mod-list" style="display:none"></section>
+        <!-- //검색 리스트 -->
         <!-- 플레이 리스트 -->
-        <section id="playList" class="mod-list" style="display:none">
-            <div class="playlist-ctr">
-                <input type="checkbox" class="checkbox" name="" title="전체선택"/>
-                <button class="button">전체듣기</button>
-                <button class="button">선택듣기</button>
-                <button class="button">재생목록 추가</button>
-                <button class="button">선택담기</button>
-            </div>
-            <ol class="playlist">
-                <li class="playlist-item">
-                    <span class="col1"><input type="checkbox" class="checkbox" title="마음대로-이진아 선택"/></span>
-                    <span class="col2"><em class="screen_out">순위</em>1</span>
-                    <span class="col3"><button class="button">재생</button></span>
-                    <span class="col4"><button class="button">추가</button></span>
-                    <span class="col5"><em class="screen_out">곡명</em>마음대로</span>
-                    <span class="col6"><em class="screen_out">아티스트</em>이진아</span>
-                    <span class="col7"><button class="button">가사</button></span>
-                    <span class="col8"><button class="button">담기</button></span>
-                </li>
-            </ol>
-            <div class="list-ctr">
-                <input type="checkbox" class="checkbox" name="" title="전체선택"/>
-                <button class="button">전체듣기</button>
-                <button class="button">선택듣기</button>
-                <button class="button">재생목록 추가</button>
-                <button class="button">선택담기</button>
-            </div>
-        </section>
+        <section id="playList" class="mod-list"></section>
         <!-- //플레이 리스트 -->
     </main>
     <!-- Main : E -->
 </div>
 
 
-
-
-
-
-
-
-
-<!-- __________ TEMPLATE _____________-->
-<script type="text/template" id="tpl_itemist">
-    <div>
-        <button>선택 담기</button>
-    </div>
-    <ul>
-<% _.each( itemList, function( item ){ %>
-        <li class="item"><label><input type="checkbox" value="<%- item.id %>"/><img class="item_img" width="80" src="<%- item.thumURL %>" alt=""/><span class="item_tit"><%- item.title %></span></label></li>
-<% }); %>
-    </ul>
-</script>
-<!-- //__________ TEMPLATE _____________-->
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
 <script src="./js/01.js"></script>
-<script src="js/view/s_music.view.search.js"></script>
 </body>
 </html>
