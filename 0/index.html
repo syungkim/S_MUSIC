@@ -23,14 +23,14 @@
     <header class="l-head">
         <h1 class="logo">S MUSIC</h1>
         <div id="search" class="search">
-            <input type="search" id="search-txt" class="search-txt" placeholder="크리스마스하면 생각나는 노래?!"/><button id="search-btn" class="button search-btn">검색</button>
+            <input type="search" id="search-txt" class="search-txt" value="크리스마스" placeholder="크리스마스하면 생각나는 노래?!"/><button id="search-btn" class="button search-btn">검색</button>
         </div>
     </header>
     <!-- Header : E -->
+    <div id="stage" class="stage"><div id="video" class="video"></div><i class="closebtn fa fa-times fa-4"></i></div>
     <!-- Player : S -->
     <section class="l-play">
         <h2 class="play-tit"><b>청춘연가</b>/ 넬</h2>
-        <div id="stage" class="stage"><div id="video" class="video"></div></div>
         <div class="play-ctr">
             <button id="prev" class="fa fa-step-backward fa-2x" title="이전 곡"><span class="screen_out">이전 곡</span></button>
             <button id="pause" class="fa fa-pause fa-2x" style="display:none" title="일시정지"><span class="screen_out">일시정지</span></button>
@@ -55,7 +55,7 @@
     <main class="l-main">
         <nav class="l-nav">
             <ul>
-                <li><a href="#"><i class="fa fa-youtube-play"></i><span>멜론Top100</span></a></li>
+                <li><a href="#" data-nav="melon"><i class="fa fa-youtube-play"></i><span>멜론Top100</span></a></li>
                 <li><a href="#"><i class="fa fa-user"></i><span>마이앨범</span></a></li>
                 <li><a href="#"><i class="fa fa-users"></i><span>공개앨범</span></a></li>
             </ul>
@@ -73,7 +73,12 @@
     <!-- Main : E -->
 </div>
 
-
+<script>
+    var tag = document.createElement('script');
+    tag.src = "http://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+</script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore-min.js"></script>
