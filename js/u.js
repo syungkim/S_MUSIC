@@ -116,10 +116,11 @@
                 part : 'id',
                 maxResults : 1,
                 type : 'video',
-                videoSyndicated : true,
                 order : 'relevance',
                 q : songName + ' - ' + artist,
-                publishedAfter : searchStartDate,
+                //publishedAfter : searchStartDate,
+                videoSyndicated : true,
+                videoEmbeddable : true,
                 key : 'AIzaSyAzXin1NLQY528UIspoYjHxD5n0bxeCYWY'
 			},
 			success : function(youtube){
